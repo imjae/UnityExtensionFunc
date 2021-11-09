@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class GameObjectExtension
+public static class VectorExtension
 {
     public static Vector3 InputDirection(this Vector3 direction)
     {
