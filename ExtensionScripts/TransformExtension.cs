@@ -4,13 +4,16 @@ using UnityEngine;
 
 public static class TransformExtension
 {
+
+    //Transform에 대한 확장메서드
+    #region 
     public static GameObject GetRootObject(this Transform current)
     {
-        GameObject result = current;
+        GameObject result = current.gameObject;
 
-        while(result.parent)
+        while (result.transform.parent)
         {
-            result = result.parent;
+            result = result.transform.parent.gameObject;
         }
 
         return result;
@@ -20,11 +23,13 @@ public static class TransformExtension
     {
         List<GameObject> result = new List<GameObject>();
 
-        for(int i=0; i<current.childCount; i++)
+        for (int i = 0; i < current.childCount; i++)
         {
-            result.Add(current.GetChild(i));
+            result.Add(current.GetChild(i).gameObject);
         }
 
         return result;
+
     }
+    #endregion
 }
