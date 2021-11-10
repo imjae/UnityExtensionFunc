@@ -18,4 +18,6 @@ Vector3 CalcGravityVelocity(this Vector3 velocity)
 
 ## Transform
 
-Trensform ...
+GameObject GetRootObject(this Transform current)
+
+List<GameObject> GetChildsForList(this Transform current)
